@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Boomboom';
+    src: local('Boomboom'), url('boomboom.woff2') format('woff2'), url('boomboom.woff') format('woff'), url('boomboom.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@keyframes remove_blur {
+	from{
+		filter: blur(10px);
+	}
+	to {
+		filter: blur(0);
+	}
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+	
+}
+body > div header,body > div main {
+	animation: remove_blur 3s linear 1s 1 normal both running;
+}
+body > div {
+    background-color: lightblue;
+    padding:0;
+}
+#hello-world {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255,255,255,0.1);
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 300%;
+	color: white;
+	
+}
